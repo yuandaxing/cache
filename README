@@ -1,0 +1,4 @@
+this version of cache is reference of redis
+
+changes
+1 to implement a faster malloc/free
