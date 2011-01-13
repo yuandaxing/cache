@@ -512,7 +512,7 @@ static void _dictStringKeyValCopyHTValDestructor(void *privdata, void *val)
 
     _dictFree((void*)val); /* ATTENTION: const cast */
 }
-
+//no val dup, just copy key
 dictType dictTypeHeapStringCopyKey = {
     _dictStringCopyHTHashFunction,        /* hash function */
     _dictStringCopyHTKeyDup,              /* key dup */
@@ -529,7 +529,7 @@ dictType dictTypeHeapStrings = {
     NULL,                               /* key dup */
     NULL,                               /* val dup */
     _dictStringCopyHTKeyCompare,          /* key compare */
-    _dictStringCopyHTKeyDestructor,       /* key destructor */
+    _dictStringCopyHTKeyDestructor,       /* key destructor, should be NULL */
     NULL                                /* val destructor */
 };
 

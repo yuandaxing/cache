@@ -1,21 +1,27 @@
 CC=gcc
-DEBUG = -g -DDEBUG
-CFLAGS= -lpthread -lm -lz
-LDFLAGS=
+DEBUG = 
+CFLAGS= -g -DDEBUG
+LDFLAGS=-lpthread -lm -lz
 
-SRC = test.c zmalloc.c 
+SRC = zmalloc.c test.c 
 TARGET = test
+LIB = libmemory.a
 
 OBJ := $(SRC:.c=.o)
 
-test:$(TARGET)
+all:$(TARGET) lib
 
 $(TARGET):$(OBJ)
 	$(CC) $(LDFLAGS) -o $@ $^	
 %.o:%.c
-	$(CC) -o $@ -c $(DEBUG) $<
+	$(CC) $(CFLAGS) $(DEBUG) -c  $<
+
+lib:
+	ar cr $(LIB) zmalloc.o
+	mv $(LIB)  ../lib/
 
 .PHONY:clean
 
 clean:
 	rm -f $(OBJ) $(TARGET) $(OBJE)
+	rm -rf ../lib/$(LIB)

@@ -1,0 +1,97 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CC	Makefile	/^CC=gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS= -lpthread -lm -lz$/;"	m
+DEBUG	Makefile	/^DEBUG = -g$/;"	m
+DICT_ERR	dict.h	5;"	d
+DICT_HT_INITIAL_SIZE	dict.h	41;"	d
+DICT_NOTUSED	dict.h	8;"	d
+DICT_OK	dict.h	4;"	d
+DICT_STATS_VECTLEN	dict.c	420;"	d	file:
+INCLUDE	Makefile	/^INCLUDE=-I $(SRCDIR)\/include$/;"	m
+LDFLAGS	Makefile	/^LDFLAGS=$/;"	m
+OBJ	Makefile	/^OBJ := $(SRC:.c=.o)$/;"	m
+RANLIB	Makefile	/^RANLIB=ranlib$/;"	m
+SRC	Makefile	/^SRC = dict.c $/;"	m
+SRCDIR	Makefile	/^SRCDIR=..$/;"	m
+TARGET	Makefile	/^TARGET = $/;"	m
+__DICT_H	dict.h	2;"	d
+_dictAlloc	dict.c	/^static void *_dictAlloc(size_t size)$/;"	f	file:
+_dictClear	dict.c	/^int _dictClear(dict *ht)$/;"	f
+_dictExpandIfNeeded	dict.c	/^static int _dictExpandIfNeeded(dict *ht)$/;"	f	file:
+_dictFree	dict.c	/^static void _dictFree(void *ptr) {$/;"	f	file:
+_dictInit	dict.c	/^int _dictInit(dict *ht, dictType *type,$/;"	f
+_dictKeyIndex	dict.c	/^static int _dictKeyIndex(dict *ht, const void *key)$/;"	f	file:
+_dictNextPower	dict.c	/^static unsigned long _dictNextPower(unsigned long size)$/;"	f	file:
+_dictPanic	dict.c	/^static void _dictPanic(const char *fmt, ...)$/;"	f	file:
+_dictReset	dict.c	/^static void _dictReset(dict *ht)$/;"	f	file:
+_dictStringCopyHTHashFunction	dict.c	/^static unsigned int _dictStringCopyHTHashFunction(const void *key)$/;"	f	file:
+_dictStringCopyHTKeyCompare	dict.c	/^static int _dictStringCopyHTKeyCompare(void *privdata, const void *key1,$/;"	f	file:
+_dictStringCopyHTKeyDestructor	dict.c	/^static void _dictStringCopyHTKeyDestructor(void *privdata, void *key)$/;"	f	file:
+_dictStringCopyHTKeyDup	dict.c	/^static void *_dictStringCopyHTKeyDup(void *privdata, const void *key)$/;"	f	file:
+_dictStringKeyValCopyHTValDestructor	dict.c	/^static void _dictStringKeyValCopyHTValDestructor(void *privdata, void *val)$/;"	f	file:
+_dictStringKeyValCopyHTValDup	dict.c	/^static void *_dictStringKeyValCopyHTValDup(void *privdata, const void *val)$/;"	f	file:
+dict	dict.h	/^typedef struct dict {$/;"	s
+dict	dict.h	/^} dict;$/;"	t	typeref:struct:dict
+dictAdd	dict.c	/^int dictAdd(dict *ht, void *key, void *val)$/;"	f
+dictCompareHashKeys	dict.h	66;"	d
+dictCreate	dict.c	/^dict *dictCreate(dictType *type,$/;"	f
+dictDelete	dict.c	/^int dictDelete(dict *ht, const void *key) {$/;"	f
+dictDeleteNoFree	dict.c	/^int dictDeleteNoFree(dict *ht, const void *key) {$/;"	f
+dictEmpty	dict.c	/^void dictEmpty(dict *ht) {$/;"	f
+dictEntry	dict.h	/^typedef struct dictEntry {$/;"	s
+dictEntry	dict.h	/^} dictEntry;$/;"	t	typeref:struct:dictEntry
+dictExpand	dict.c	/^int dictExpand(dict *ht, unsigned long size)$/;"	f
+dictFind	dict.c	/^dictEntry *dictFind(dict *ht, const void *key)$/;"	f
+dictFreeEntryKey	dict.h	55;"	d
+dictFreeEntryVal	dict.h	44;"	d
+dictGenHashFunction	dict.c	/^unsigned int dictGenHashFunction(const unsigned char *buf, int len) {$/;"	f
+dictGenericDelete	dict.c	/^static int dictGenericDelete(dict *ht, const void *key, int nofree)$/;"	f	file:
+dictGetEntryKey	dict.h	73;"	d
+dictGetEntryVal	dict.h	74;"	d
+dictGetIterator	dict.c	/^dictIterator *dictGetIterator(dict *ht)$/;"	f
+dictGetRandomKey	dict.c	/^dictEntry *dictGetRandomKey(dict *ht)$/;"	f
+dictHashKey	dict.h	71;"	d
+dictIdentityHashFunction	dict.c	/^unsigned int dictIdentityHashFunction(unsigned int key)$/;"	f
+dictIntHashFunction	dict.c	/^unsigned int dictIntHashFunction(unsigned int key)$/;"	f
+dictIterator	dict.h	/^typedef struct dictIterator {$/;"	s
+dictIterator	dict.h	/^} dictIterator;$/;"	t	typeref:struct:dictIterator
+dictNext	dict.c	/^dictEntry *dictNext(dictIterator *iter)$/;"	f
+dictPrintStats	dict.c	/^void dictPrintStats(dict *ht) {$/;"	f
+dictRelease	dict.c	/^void dictRelease(dict *ht)$/;"	f
+dictReleaseIterator	dict.c	/^void dictReleaseIterator(dictIterator *iter)$/;"	f
+dictReplace	dict.c	/^int dictReplace(dict *ht, void *key, void *val)$/;"	f
+dictResize	dict.c	/^int dictResize(dict *ht)$/;"	f
+dictSetHashKey	dict.h	59;"	d
+dictSetHashVal	dict.h	48;"	d
+dictSize	dict.h	76;"	d
+dictSlots	dict.h	75;"	d
+dictType	dict.h	/^typedef struct dictType {$/;"	s
+dictType	dict.h	/^} dictType;$/;"	t	typeref:struct:dictType
+dictTypeHeapStringCopyKey	dict.c	/^dictType dictTypeHeapStringCopyKey = {$/;"	v
+dictTypeHeapStringCopyKeyValue	dict.c	/^dictType dictTypeHeapStringCopyKeyValue = {$/;"	v
+dictTypeHeapStrings	dict.c	/^dictType dictTypeHeapStrings = {$/;"	v
+entry	dict.h	/^    dictEntry *entry, *nextEntry;$/;"	m	struct:dictIterator
+hashFunction	dict.h	/^    unsigned int (*hashFunction)(const void *key);$/;"	m	struct:dictType
+ht	dict.h	/^    dict *ht;$/;"	m	struct:dictIterator
+index	dict.h	/^    int index;$/;"	m	struct:dictIterator
+key	dict.h	/^    void *key;$/;"	m	struct:dictEntry
+keyCompare	dict.h	/^    int (*keyCompare)(void *privdata, const void *key1, const void *key2);$/;"	m	struct:dictType
+keyDestructor	dict.h	/^    void (*keyDestructor)(void *privdata, void *key);$/;"	m	struct:dictType
+keyDup	dict.h	/^    void *(*keyDup)(void *privdata, const void *key);$/;"	m	struct:dictType
+main	test.c	/^int main()$/;"	f
+next	dict.h	/^    struct dictEntry *next;$/;"	m	struct:dictEntry	typeref:struct:dictEntry::dictEntry
+nextEntry	dict.h	/^    dictEntry *entry, *nextEntry;$/;"	m	struct:dictIterator
+privdata	dict.h	/^    void *privdata;$/;"	m	struct:dict
+size	dict.h	/^    unsigned long size;$/;"	m	struct:dict
+sizemask	dict.h	/^    unsigned long sizemask;$/;"	m	struct:dict
+table	dict.h	/^    dictEntry **table;$/;"	m	struct:dict
+type	dict.h	/^    dictType *type;$/;"	m	struct:dict
+used	dict.h	/^    unsigned long used;$/;"	m	struct:dict
+val	dict.h	/^    void *val;$/;"	m	struct:dictEntry
+valDestructor	dict.h	/^    void (*valDestructor)(void *privdata, void *obj);$/;"	m	struct:dictType
+valDup	dict.h	/^    void *(*valDup)(void *privdata, const void *obj);$/;"	m	struct:dictType

@@ -1,0 +1,2834 @@
+cscope 15 $HOME/cache/hashtable -q 0000000136 0000012921
+	@dict.c
+
+1 
+	~<¡dio.h
+>
+
+2 
+	~<¡dlib.h
+>
+
+3 
+	~<¡ršg.h
+>
+
+4 
+	~<¡d¬g.h
+>
+
+5 
+	~<as£¹.h
+>
+
+6 
+	~<lim™s.h
+>
+
+8 
+	~"diù.h
+"
+
+9 
+	~"zm®loc.h
+"
+
+13 
+	$_diùPªic
+(cÚ¡ *
+fmt
+, ...)
+
+15 
+va_li¡
+ 
+­
+;
+
+17 
+	`va_¡¬t
+(
+­
+, 
+fmt
+);
+
+18 
+	`årštf
+(
+¡d”r
+, "\nDICT LIBRARY PANIC: ");
+
+19 
+	`vårštf
+(
+¡d”r
+, 
+fmt
+, 
+­
+);
+
+20 
+	`årštf
+(
+¡d”r
+, "\n\n");
+
+21 
+	`va_’d
+(
+­
+);
+
+22 
+	}
+}
+
+26 *
+	$_diùAÎoc
+(
+size_t
+ 
+size
+)
+
+28 *
+p
+ = 
+	`zm®loc
+(
+size
+);
+
+29 ià(
+p
+ =ğ
+NULL
+)
+
+30 
+	`_diùPªic
+("Out of memory");
+
+31  
+p
+;
+
+32 
+	}
+}
+
+34 
+	$_diùF»e
+(*
+±r
+) {
+
+35 
+	`zä“
+(
+±r
+);
+
+36 
+	}
+}
+
+40 
+_diùEx·ndIfN“ded
+(
+diù
+ *
+ht
+);
+
+41 
+_diùNextPow”
+(
+size
+);
+
+42 
+_diùKeyIndex
+(
+diù
+ *
+ht
+, cÚ¡ *
+key
+);
+
+43 
+_diùIn™
+(
+diù
+ *
+ht
+, 
+diùTy³
+ *
+ty³
+, *
+´ivD©aPŒ
+);
+
+48 
+	$diùIÁHashFunùiÚ
+(
+key
+)
+
+50 
+key
+ += ~(key << 15);
+
+51 
+key
+ ^= (key >> 10);
+
+52 
+key
+ += (key << 3);
+
+53 
+key
+ ^= (key >> 6);
+
+54 
+key
+ += ~(key << 11);
+
+55 
+key
+ ^= (key >> 16);
+
+56  
+key
+;
+
+57 
+	}
+}
+
+60 
+	$diùId’t™yHashFunùiÚ
+(
+key
+)
+
+62  
+key
+;
+
+63 
+	}
+}
+
+67 
+	$diùG’HashFunùiÚ
+(cÚ¡ *
+buf
+, 
+Ën
+) {
+
+68 
+hash
+ = 5381;
+
+70 
+Ën
+--)
+
+71 
+hash
+ = ((hash << 5è+ hashè+ (*
+buf
+++);
+
+72  
+hash
+;
+
+73 
+	}
+}
+
+79 
+	$_diùRe£t
+(
+diù
+ *
+ht
+)
+
+81 
+ht
+->
+bË
+ = 
+NULL
+;
+
+82 
+ht
+->
+size
+ = 0;
+
+83 
+ht
+->
+sizemask
+ = 0;
+
+84 
+ht
+->
+u£d
+ = 0;
+
+85 
+	}
+}
+
+88 
+diù
+ *
+	$diùC»©e
+(
+diùTy³
+ *
+ty³
+,
+
+89 *
+´ivD©aPŒ
+)
+
+91 
+diù
+ *
+ht
+ = 
+	`_diùAÎoc
+((*ht));
+
+93 
+	`_diùIn™
+(
+ht
+,
+ty³
+,
+´ivD©aPŒ
+);
+
+94  
+ht
+;
+
+95 
+	}
+}
+
+98 
+	$_diùIn™
+(
+diù
+ *
+ht
+, 
+diùTy³
+ *
+ty³
+,
+
+99 *
+´ivD©aPŒ
+)
+
+101 
+	`_diùRe£t
+(
+ht
+);
+
+102 
+ht
+->
+ty³
+ =ype;
+
+103 
+ht
+->
+´ivd©a
+ = 
+´ivD©aPŒ
+;
+
+104  
+DICT_OK
+;
+
+105 
+	}
+}
+
+109 
+	$diùResize
+(
+diù
+ *
+ht
+)
+
+111 
+mšim®
+ = 
+ht
+->
+u£d
+;
+
+113 ià(
+mšim®
+ < 
+DICT_HT_INITIAL_SIZE
+)
+
+114 
+mšim®
+ = 
+DICT_HT_INITIAL_SIZE
+;
+
+115  
+	`diùEx·nd
+(
+ht
+, 
+mšim®
+);
+
+116 
+	}
+}
+
+119 
+	$diùEx·nd
+(
+diù
+ *
+ht
+, 
+size
+)
+
+121 
+diù
+ 
+n
+;
+
+122 
+»®size
+ = 
+	`_diùNextPow”
+(
+size
+), 
+i
+;
+
+126 ià(
+ht
+->
+u£d
+ > 
+size
+)
+
+127  
+DICT_ERR
+;
+
+129 
+	`_diùIn™
+(&
+n
+, 
+ht
+->
+ty³
+, ht->
+´ivd©a
+);
+
+130 
+n
+.
+size
+ = 
+»®size
+;
+
+131 
+n
+.
+sizemask
+ = 
+»®size
+-1;
+
+132 
+n
+.
+bË
+ = 
+	`_diùAÎoc
+(
+»®size
+*(
+diùEÁry
+*));
+
+135 
+	`mem£t
+(
+n
+.
+bË
+, 0, 
+»®size
+*(
+diùEÁry
+*));
+
+140 
+n
+.
+u£d
+ = 
+ht
+->used;
+
+141 
+i
+ = 0; i < 
+ht
+->
+size
+ && ht->
+u£d
+ > 0; i++) {
+
+142 
+diùEÁry
+ *
+he
+, *
+ÃxtHe
+;
+
+144 ià(
+ht
+->
+bË
+[
+i
+] =ğ
+NULL
+) ;
+
+147 
+he
+ = 
+ht
+->
+bË
+[
+i
+];
+
+148 
+he
+) {
+
+149 
+h
+;
+
+151 
+ÃxtHe
+ = 
+he
+->
+Ãxt
+;
+
+153 
+h
+ = 
+	`diùHashKey
+(
+ht
+, 
+he
+->
+key
+è& 
+n
+.
+sizemask
+;
+
+154 
+he
+->
+Ãxt
+ = 
+n
+.
+bË
+[
+h
+];
+
+155 
+n
+.
+bË
+[
+h
+] = 
+he
+;
+
+156 
+ht
+->
+u£d
+--;
+
+158 
+he
+ = 
+ÃxtHe
+;
+
+161 
+	`as£¹
+(
+ht
+->
+u£d
+ == 0);
+
+162 
+	`_diùF»e
+(
+ht
+->
+bË
+);
+
+165 *
+ht
+ = 
+n
+;
+
+166  
+DICT_OK
+;
+
+167 
+	}
+}
+
+170 
+	$diùAdd
+(
+diù
+ *
+ht
+, *
+key
+, *
+v®
+)
+
+172 
+šdex
+;
+
+173 
+diùEÁry
+ *
+’Œy
+;
+
+177 ià((
+šdex
+ = 
+	`_diùKeyIndex
+(
+ht
+, 
+key
+)) == -1)
+
+178  
+DICT_ERR
+;
+
+181 
+’Œy
+ = 
+	`_diùAÎoc
+((*entry));
+
+182 
+’Œy
+->
+Ãxt
+ = 
+ht
+->
+bË
+[
+šdex
+];
+
+183 
+ht
+->
+bË
+[
+šdex
+] = 
+’Œy
+;
+
+186 
+	`diùS‘HashKey
+(
+ht
+, 
+’Œy
+, 
+key
+);
+
+187 
+	`diùS‘HashV®
+(
+ht
+, 
+’Œy
+, 
+v®
+);
+
+188 
+ht
+->
+u£d
+++;
+
+189  
+DICT_OK
+;
+
+190 
+	}
+}
+
+193 
+	$diùR•Ïû
+(
+diù
+ *
+ht
+, *
+key
+, *
+v®
+)
+
+195 
+diùEÁry
+ *
+’Œy
+;
+
+200 ià(
+	`diùAdd
+(
+ht
+, 
+key
+, 
+v®
+è=ğ
+DICT_OK
+)
+
+201  
+DICT_OK
+;
+
+203 
+’Œy
+ = 
+	`diùFšd
+(
+ht
+, 
+key
+);
+
+205 
+	`diùF»eEÁryV®
+(
+ht
+, 
+’Œy
+);
+
+206 
+	`diùS‘HashV®
+(
+ht
+, 
+’Œy
+, 
+v®
+);
+
+207  
+DICT_OK
+;
+
+208 
+	}
+}
+
+211 
+	$diùG’”icD–‘e
+(
+diù
+ *
+ht
+, cÚ¡ *
+key
+, 
+noä“
+)
+
+213 
+h
+;
+
+214 
+diùEÁry
+ *
+he
+, *
+´evHe
+;
+
+216 ià(
+ht
+->
+size
+ == 0)
+
+217  
+DICT_ERR
+;
+
+218 
+h
+ = 
+	`diùHashKey
+(
+ht
+, 
+key
+è& ht->
+sizemask
+;
+
+219 
+he
+ = 
+ht
+->
+bË
+[
+h
+];
+
+221 
+´evHe
+ = 
+NULL
+;
+
+222 
+he
+) {
+
+223 ià(
+	`diùCom·»HashKeys
+(
+ht
+, 
+key
+, 
+he
+->key)) {
+
+225 ià(
+´evHe
+)
+
+226 
+´evHe
+->
+Ãxt
+ = 
+he
+->next;
+
+228 
+ht
+->
+bË
+[
+h
+] = 
+he
+->
+Ãxt
+;
+
+229 ià(!
+noä“
+) {
+
+230 
+	`diùF»eEÁryKey
+(
+ht
+, 
+he
+);
+
+231 
+	`diùF»eEÁryV®
+(
+ht
+, 
+he
+);
+
+233 
+	`_diùF»e
+(
+he
+);
+
+234 
+ht
+->
+u£d
+--;
+
+235  
+DICT_OK
+;
+
+237 
+´evHe
+ = 
+he
+;
+
+238 
+he
+ = he->
+Ãxt
+;
+
+240  
+DICT_ERR
+;
+
+241 
+	}
+}
+
+243 
+	$diùD–‘e
+(
+diù
+ *
+ht
+, cÚ¡ *
+key
+) {
+
+244  
+	`diùG’”icD–‘e
+(
+ht
+,
+key
+,0);
+
+245 
+	}
+}
+
+247 
+	$diùD–‘eNoF»e
+(
+diù
+ *
+ht
+, cÚ¡ *
+key
+) {
+
+248  
+	`diùG’”icD–‘e
+(
+ht
+,
+key
+,1);
+
+249 
+	}
+}
+
+252 
+	$_diùCË¬
+(
+diù
+ *
+ht
+)
+
+254 
+i
+;
+
+257 
+i
+ = 0; i < 
+ht
+->
+size
+ && ht->
+u£d
+ > 0; i++) {
+
+258 
+diùEÁry
+ *
+he
+, *
+ÃxtHe
+;
+
+260 ià((
+he
+ = 
+ht
+->
+bË
+[
+i
+]è=ğ
+NULL
+) ;
+
+261 
+he
+) {
+
+262 
+ÃxtHe
+ = 
+he
+->
+Ãxt
+;
+
+263 
+	`diùF»eEÁryKey
+(
+ht
+, 
+he
+);
+
+264 
+	`diùF»eEÁryV®
+(
+ht
+, 
+he
+);
+
+265 
+	`_diùF»e
+(
+he
+);
+
+266 
+ht
+->
+u£d
+--;
+
+267 
+he
+ = 
+ÃxtHe
+;
+
+271 
+	`_diùF»e
+(
+ht
+->
+bË
+);
+
+273 
+	`_diùRe£t
+(
+ht
+);
+
+274  
+DICT_OK
+;
+
+275 
+	}
+}
+
+278 
+	$diùR–—£
+(
+diù
+ *
+ht
+)
+
+280 
+	`_diùCË¬
+(
+ht
+);
+
+281 
+	`_diùF»e
+(
+ht
+);
+
+282 
+	}
+}
+
+284 
+diùEÁry
+ *
+	$diùFšd
+(
+diù
+ *
+ht
+, cÚ¡ *
+key
+)
+
+286 
+diùEÁry
+ *
+he
+;
+
+287 
+h
+;
+
+289 ià(
+ht
+->
+size
+ =ğ0è 
+NULL
+;
+
+290 
+h
+ = 
+	`diùHashKey
+(
+ht
+, 
+key
+è& ht->
+sizemask
+;
+
+291 
+he
+ = 
+ht
+->
+bË
+[
+h
+];
+
+292 
+he
+) {
+
+293 ià(
+	`diùCom·»HashKeys
+(
+ht
+, 
+key
+, 
+he
+->key))
+
+294  
+he
+;
+
+295 
+he
+ = he->
+Ãxt
+;
+
+297  
+NULL
+;
+
+298 
+	}
+}
+
+300 
+diùI‹¿tÜ
+ *
+	$diùG‘I‹¿tÜ
+(
+diù
+ *
+ht
+)
+
+302 
+diùI‹¿tÜ
+ *
+™”
+ = 
+	`_diùAÎoc
+((*iter));
+
+304 
+™”
+->
+ht
+ = ht;
+
+305 
+™”
+->
+šdex
+ = -1;
+
+306 
+™”
+->
+’Œy
+ = 
+NULL
+;
+
+307 
+™”
+->
+ÃxtEÁry
+ = 
+NULL
+;
+
+308  
+™”
+;
+
+309 
+	}
+}
+
+311 
+diùEÁry
+ *
+	$diùNext
+(
+diùI‹¿tÜ
+ *
+™”
+)
+
+314 ià(
+™”
+->
+’Œy
+ =ğ
+NULL
+) {
+
+315 
+™”
+->
+šdex
+++;
+
+316 ià(
+™”
+->
+šdex
+ >=
+
+317 (sigÃd)
+™”
+->
+ht
+->
+size
+) ;
+
+318 
+™”
+->
+’Œy
+ = i‹r->
+ht
+->
+bË
+[™”->
+šdex
+];
+
+320 
+™”
+->
+’Œy
+ = i‹r->
+ÃxtEÁry
+;
+
+322 ià(
+™”
+->
+’Œy
+) {
+
+325 
+™”
+->
+ÃxtEÁry
+ = i‹r->
+’Œy
+->
+Ãxt
+;
+
+326  
+™”
+->
+’Œy
+;
+
+329  
+NULL
+;
+
+330 
+	}
+}
+
+332 
+	$diùR–—£I‹¿tÜ
+(
+diùI‹¿tÜ
+ *
+™”
+)
+
+334 
+	`_diùF»e
+(
+™”
+);
+
+335 
+	}
+}
+
+339 
+diùEÁry
+ *
+	$diùG‘RªdomKey
+(
+diù
+ *
+ht
+)
+
+341 
+diùEÁry
+ *
+he
+;
+
+342 
+h
+;
+
+343 
+li¡Ën
+, 
+li¡–e
+;
+
+345 ià(
+ht
+->
+u£d
+ =ğ0è 
+NULL
+;
+
+347 
+h
+ = 
+	`¿ndom
+(è& 
+ht
+->
+sizemask
+;
+
+348 
+he
+ = 
+ht
+->
+bË
+[
+h
+];
+
+349 } 
+he
+ =ğ
+NULL
+);
+
+355 
+li¡Ën
+ = 0;
+
+356 
+he
+) {
+
+357 
+he
+ = he->
+Ãxt
+;
+
+358 
+li¡Ën
+++;
+
+360 
+li¡–e
+ = 
+	`¿ndom
+(è% 
+li¡Ën
+;
+
+361 
+he
+ = 
+ht
+->
+bË
+[
+h
+];
+
+362 
+li¡–e
+--è
+he
+ = he->
+Ãxt
+;
+
+363  
+he
+;
+
+364 
+	}
+}
+
+369 
+	$_diùEx·ndIfN“ded
+(
+diù
+ *
+ht
+)
+
+373 ià(
+ht
+->
+size
+ == 0)
+
+374  
+	`diùEx·nd
+(
+ht
+, 
+DICT_HT_INITIAL_SIZE
+);
+
+375 ià(
+ht
+->
+u£d
+ =ğht->
+size
+)
+
+376  
+	`diùEx·nd
+(
+ht
+, ht->
+size
+*2);
+
+377  
+DICT_OK
+;
+
+378 
+	}
+}
+
+381 
+	$_diùNextPow”
+(
+size
+)
+
+383 
+i
+ = 
+DICT_HT_INITIAL_SIZE
+;
+
+385 ià(
+size
+ >ğ
+LONG_MAX
+)  LONG_MAX;
+
+387 ià(
+i
+ >ğ
+size
+)
+
+388  
+i
+;
+
+389 
+i
+ *= 2;
+
+391 
+	}
+}
+
+396 
+	$_diùKeyIndex
+(
+diù
+ *
+ht
+, cÚ¡ *
+key
+)
+
+398 
+h
+;
+
+399 
+diùEÁry
+ *
+he
+;
+
+402 ià(
+	`_diùEx·ndIfN“ded
+(
+ht
+è=ğ
+DICT_ERR
+)
+
+405 
+h
+ = 
+	`diùHashKey
+(
+ht
+, 
+key
+è& ht->
+sizemask
+;
+
+407 
+he
+ = 
+ht
+->
+bË
+[
+h
+];
+
+408 
+he
+) {
+
+409 ià(
+	`diùCom·»HashKeys
+(
+ht
+, 
+key
+, 
+he
+->key))
+
+411 
+he
+ = he->
+Ãxt
+;
+
+413  
+h
+;
+
+414 
+	}
+}
+
+416 
+	$diùEm±y
+(
+diù
+ *
+ht
+) {
+
+417 
+	`_diùCË¬
+(
+ht
+);
+
+418 
+	}
+}
+
+420 
+	#DICT_STATS_VECTLEN
+ 50
+
+	)
+
+421 
+	$diùPrštSts
+(
+diù
+ *
+ht
+) {
+
+422 
+i
+, 
+¦Ùs
+ = 0, 
+chašËn
+, 
+maxchašËn
+ = 0;
+
+423 
+tÙchašËn
+ = 0;
+
+424 
+şveùÜ
+[
+DICT_STATS_VECTLEN
+];
+
+426 ià(
+ht
+->
+u£d
+ == 0) {
+
+427 
+	`´štf
+("No stats‡vailable forƒmpty dictionaries\n");
+
+431 
+i
+ = 0; i < 
+DICT_STATS_VECTLEN
+; i++è
+şveùÜ
+[i] = 0;
+
+432 
+i
+ = 0; i < 
+ht
+->
+size
+; i++) {
+
+433 
+diùEÁry
+ *
+he
+;
+
+435 ià(
+ht
+->
+bË
+[
+i
+] =ğ
+NULL
+) {
+
+436 
+şveùÜ
+[0]++;
+
+439 
+¦Ùs
+++;
+
+441 
+chašËn
+ = 0;
+
+442 
+he
+ = 
+ht
+->
+bË
+[
+i
+];
+
+443 
+he
+) {
+
+444 
+chašËn
+++;
+
+445 
+he
+ = he->
+Ãxt
+;
+
+447 
+şveùÜ
+[(
+chašËn
+ < 
+DICT_STATS_VECTLEN
+) ? chainlen : (DICT_STATS_VECTLEN-1)]++;
+
+448 ià(
+chašËn
+ > 
+maxchašËn
+) maxchainlen = chainlen;
+
+449 
+tÙchašËn
+ +ğ
+chašËn
+;
+
+451 
+	`´štf
+("Hashable stats:\n");
+
+452 
+	`´štf
+("abË size: %ld\n", 
+ht
+->
+size
+);
+
+453 
+	`´štf
+("‚umb” oà–em’ts: %ld\n", 
+ht
+->
+u£d
+);
+
+454 
+	`´štf
+(" difã»Á slÙs: %ld\n", 
+¦Ùs
+);
+
+455 
+	`´štf
+(" max chaš†’gth: %ld\n", 
+maxchašËn
+);
+
+456 
+	`´štf
+("‡vg chaš†’gth (couÁed): %.02f\n", ()
+tÙchašËn
+/
+¦Ùs
+);
+
+457 
+	`´štf
+("‡vg chaš†’gth (compu‹d): %.02f\n", ()
+ht
+->
+u£d
+/
+¦Ùs
+);
+
+458 
+	`´štf
+(" Chain†ength distribution:\n");
+
+459 
+i
+ = 0; i < 
+DICT_STATS_VECTLEN
+-1; i++) {
+
+460 ià(
+şveùÜ
+[
+i
+] == 0) ;
+
+461 
+	`´štf
+(" %s%ld: %ld (%.02f%%)\n",(
+i
+ =ğ
+DICT_STATS_VECTLEN
+-1)?">ğ":"", i, 
+şveùÜ
+[i], (()şveùÜ[i]/
+ht
+->
+size
+)*100);
+
+463 
+	}
+}
+
+467 
+	$_diùSŒšgCİyHTHashFunùiÚ
+(cÚ¡ *
+key
+)
+
+469  
+	`diùG’HashFunùiÚ
+(
+key
+, 
+	`¡¾’
+(key));
+
+470 
+	}
+}
+
+472 *
+	$_diùSŒšgCİyHTKeyDup
+(*
+´ivd©a
+, cÚ¡ *
+key
+)
+
+474 
+Ën
+ = 
+	`¡¾’
+(
+key
+);
+
+475 *
+cİy
+ = 
+	`_diùAÎoc
+(
+Ën
++1);
+
+476 
+	`DICT_NOTUSED
+(
+´ivd©a
+);
+
+478 
+	`memıy
+(
+cİy
+, 
+key
+, 
+Ën
+);
+
+479 
+cİy
+[
+Ën
+] = '\0';
+
+480  
+cİy
+;
+
+481 
+	}
+}
+
+483 *
+	$_diùSŒšgKeyV®CİyHTV®Dup
+(*
+´ivd©a
+, cÚ¡ *
+v®
+)
+
+485 
+Ën
+ = 
+	`¡¾’
+(
+v®
+);
+
+486 *
+cİy
+ = 
+	`_diùAÎoc
+(
+Ën
++1);
+
+487 
+	`DICT_NOTUSED
+(
+´ivd©a
+);
+
+489 
+	`memıy
+(
+cİy
+, 
+v®
+, 
+Ën
+);
+
+490 
+cİy
+[
+Ën
+] = '\0';
+
+491  
+cİy
+;
+
+492 
+	}
+}
+
+494 
+	$_diùSŒšgCİyHTKeyCom·»
+(*
+´ivd©a
+, cÚ¡ *
+key1
+,
+
+495 cÚ¡ *
+key2
+)
+
+497 
+	`DICT_NOTUSED
+(
+´ivd©a
+);
+
+499  
+	`¡rcmp
+(
+key1
+, 
+key2
+) == 0;
+
+500 
+	}
+}
+
+502 
+	$_diùSŒšgCİyHTKeyDe¡ruùÜ
+(*
+´ivd©a
+, *
+key
+)
+
+504 
+	`DICT_NOTUSED
+(
+´ivd©a
+);
+
+506 
+	`_diùF»e
+((*)
+key
+);
+
+507 
+	}
+}
+
+509 
+	$_diùSŒšgKeyV®CİyHTV®De¡ruùÜ
+(*
+´ivd©a
+, *
+v®
+)
+
+511 
+	`DICT_NOTUSED
+(
+´ivd©a
+);
+
+513 
+	`_diùF»e
+((*)
+v®
+);
+
+514 
+	}
+}
+
+516 
+diùTy³
+ 
+	gdiùTy³H—pSŒšgCİyKey
+ = {
+
+517 
+_diùSŒšgCİyHTHashFunùiÚ
+,
+
+518 
+_diùSŒšgCİyHTKeyDup
+,
+
+519 
+NULL
+,
+
+520 
+_diùSŒšgCİyHTKeyCom·»
+,
+
+521 
+_diùSŒšgCİyHTKeyDe¡ruùÜ
+,
+
+522 
+NULL
+
+
+527 
+diùTy³
+ 
+	gdiùTy³H—pSŒšgs
+ = {
+
+528 
+_diùSŒšgCİyHTHashFunùiÚ
+,
+
+529 
+NULL
+,
+
+530 
+NULL
+,
+
+531 
+_diùSŒšgCİyHTKeyCom·»
+,
+
+532 
+_diùSŒšgCİyHTKeyDe¡ruùÜ
+,
+
+533 
+NULL
+
+
+538 
+diùTy³
+ 
+	gdiùTy³H—pSŒšgCİyKeyV®ue
+ = {
+
+539 
+_diùSŒšgCİyHTHashFunùiÚ
+,
+
+540 
+_diùSŒšgCİyHTKeyDup
+,
+
+541 
+_diùSŒšgKeyV®CİyHTV®Dup
+,
+
+542 
+_diùSŒšgCİyHTKeyCom·»
+,
+
+543 
+_diùSŒšgCİyHTKeyDe¡ruùÜ
+,
+
+544 
+_diùSŒšgKeyV®CİyHTV®De¡ruùÜ
+,
+
+	@dict.h
+
+1 #iâdeà
+__DICT_H
+
+
+2 
+	#__DICT_H
+
+
+	)
+
+4 
+	#DICT_OK
+ 0
+
+	)
+
+5 
+	#DICT_ERR
+ 1
+
+	)
+
+8 
+	#DICT_NOTUSED
+(
+V
+è((èV)
+
+	)
+
+10 
+	sdiùEÁry
+ {
+
+11 *
+	mkey
+;
+
+12 *
+	mv®
+;
+
+13 
+diùEÁry
+ *
+	mÃxt
+;
+
+14 } 
+	tdiùEÁry
+;
+
+16 
+	sdiùTy³
+ {
+
+17 (*
+	mhashFunùiÚ
+)(cÚ¡ *
+	mkey
+);
+
+18 *(*
+	mkeyDup
+)(*
+	m´ivd©a
+, cÚ¡ *
+	mkey
+);
+
+19 *(*
+	mv®Dup
+)(*
+	m´ivd©a
+, cÚ¡ *
+	mobj
+);
+
+20 (*
+	mkeyCom·»
+)(*
+	m´ivd©a
+, cÚ¡ *
+	mkey1
+, cÚ¡ *
+	mkey2
+);
+
+21 (*
+	mkeyDe¡ruùÜ
+)(*
+	m´ivd©a
+, *
+	mkey
+);
+
+22 (*
+	mv®De¡ruùÜ
+)(*
+	m´ivd©a
+, *
+	mobj
+);
+
+23 } 
+	tdiùTy³
+;
+
+25 
+	sdiù
+ {
+
+26 
+diùEÁry
+ **
+	mbË
+;
+
+27 
+diùTy³
+ *
+	mty³
+;
+
+28 
+	msize
+;
+
+29 
+	msizemask
+;
+
+30 
+	mu£d
+;
+
+31 *
+	m´ivd©a
+;
+
+32 } 
+	tdiù
+;
+
+34 
+	sdiùI‹¿tÜ
+ {
+
+35 
+diù
+ *
+	mht
+;
+
+36 
+	mšdex
+;
+
+37 
+diùEÁry
+ *
+	m’Œy
+, *
+	mÃxtEÁry
+;
+
+38 } 
+	tdiùI‹¿tÜ
+;
+
+41 
+	#DICT_HT_INITIAL_SIZE
+ 4
+
+	)
+
+44 
+	#diùF»eEÁryV®
+(
+ht
+, 
+’Œy
+) \
+
+45 ià((
+ht
+)->
+ty³
+->
+v®De¡ruùÜ
+) \
+
+46 (
+ht
+)->
+ty³
+->
+	`v®De¡ruùÜ
+((ht)->
+´ivd©a
+, (
+’Œy
+)->
+v®
+)
+
+	)
+
+48 
+	#diùS‘HashV®
+(
+ht
+, 
+’Œy
+, 
+_v®_
+) do { \
+
+49 ià((
+ht
+)->
+ty³
+->
+v®Dup
+) \
+
+50 
+’Œy
+->
+v®
+ = (
+ht
+)->
+ty³
+->
+	`v®Dup
+((ht)->
+´ivd©a
+, 
+_v®_
+); \
+
+52 
+’Œy
+->
+v®
+ = (
+_v®_
+); \
+
+53 } 0)
+
+	)
+
+55 
+	#diùF»eEÁryKey
+(
+ht
+, 
+’Œy
+) \
+
+56 ià((
+ht
+)->
+ty³
+->
+keyDe¡ruùÜ
+) \
+
+57 (
+ht
+)->
+ty³
+->
+	`keyDe¡ruùÜ
+((ht)->
+´ivd©a
+, (
+’Œy
+)->
+key
+)
+
+	)
+
+59 
+	#diùS‘HashKey
+(
+ht
+, 
+’Œy
+, 
+_key_
+) do { \
+
+60 ià((
+ht
+)->
+ty³
+->
+keyDup
+) \
+
+61 
+’Œy
+->
+key
+ = (
+ht
+)->
+ty³
+->
+	`keyDup
+((ht)->
+´ivd©a
+, 
+_key_
+); \
+
+63 
+’Œy
+->
+key
+ = (
+_key_
+); \
+
+64 } 0)
+
+	)
+
+66 
+	#diùCom·»HashKeys
+(
+ht
+, 
+key1
+, 
+key2
+) \
+
+67 (((
+ht
+)->
+ty³
+->
+keyCom·»
+) ? \
+
+68 (
+ht
+)->
+ty³
+->
+	`keyCom·»
+((ht)->
+´ivd©a
+, 
+key1
+, 
+key2
+) : \
+
+69 (
+key1
+è=ğ(
+key2
+))
+
+	)
+
+71 
+	#diùHashKey
+(
+ht
+, 
+key
+è(ht)->
+ty³
+->
+	`hashFunùiÚ
+(key)
+
+	)
+
+73 
+	#diùG‘EÁryKey
+(
+he
+è((he)->
+key
+)
+
+	)
+
+74 
+	#diùG‘EÁryV®
+(
+he
+è((he)->
+v®
+)
+
+	)
+
+75 
+	#diùSlÙs
+(
+ht
+è((ht)->
+size
+)
+
+	)
+
+76 
+	#diùSize
+(
+ht
+è((ht)->
+u£d
+)
+
+	)
+
+79 
+diù
+ *
+diùC»©e
+(
+diùTy³
+ *
+ty³
+, *
+´ivD©aPŒ
+);
+
+80 
+diùEx·nd
+(
+diù
+ *
+ht
+, 
+size
+);
+
+81 
+diùAdd
+(
+diù
+ *
+ht
+, *
+key
+, *
+v®
+);
+
+82 
+diùR•Ïû
+(
+diù
+ *
+ht
+, *
+key
+, *
+v®
+);
+
+83 
+diùD–‘e
+(
+diù
+ *
+ht
+, cÚ¡ *
+key
+);
+
+84 
+diùD–‘eNoF»e
+(
+diù
+ *
+ht
+, cÚ¡ *
+key
+);
+
+85 
+diùR–—£
+(
+diù
+ *
+ht
+);
+
+86 
+diùEÁry
+ * 
+diùFšd
+(
+diù
+ *
+ht
+, cÚ¡ *
+key
+);
+
+87 
+diùResize
+(
+diù
+ *
+ht
+);
+
+88 
+diùI‹¿tÜ
+ *
+diùG‘I‹¿tÜ
+(
+diù
+ *
+ht
+);
+
+89 
+diùEÁry
+ *
+diùNext
+(
+diùI‹¿tÜ
+ *
+™”
+);
+
+90 
+diùR–—£I‹¿tÜ
+(
+diùI‹¿tÜ
+ *
+™”
+);
+
+91 
+diùEÁry
+ *
+diùG‘RªdomKey
+(
+diù
+ *
+ht
+);
+
+92 
+diùPrštSts
+(
+diù
+ *
+ht
+);
+
+93 
+diùG’HashFunùiÚ
+(cÚ¡ *
+buf
+, 
+Ën
+);
+
+94 
+diùEm±y
+(
+diù
+ *
+ht
+);
+
+97 
+diùTy³
+ 
+diùTy³H—pSŒšgCİyKey
+;
+
+98 
+diùTy³
+ 
+diùTy³H—pSŒšgs
+;
+
+99 
+diùTy³
+ 
+diùTy³H—pSŒšgCİyKeyV®ue
+;
+
+	@test.c
+
+1 
+	~<¡dio.h
+>
+
+2 
+	~"diù.h
+"
+
+6 
+	$maš
+()
+
+8 
+diù
+ *
+¡rdiù
+ = 
+diùC»©e
+
+
+10 
+	}
+}
+
+	@
+1
+.
+0
+3
+21
+dict.c
+dict.h
+test.c

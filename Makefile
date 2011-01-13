@@ -1,9 +1,9 @@
 CC=gcc
 DEBUG = -g
-CFLAGS= -lpthread -lm -lz
-LDFLAGS=
+CFLAGS= 
+LDFLAGS=-lpthread -lm -lz
 
-SUBDIR=memory hashtable
+SUBDIR=memory log hashtable 
 SUBTARGET = subdir
 SRC = 
 

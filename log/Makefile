@@ -1,20 +1,24 @@
 CC=gcc
 DEBUG = -g
-CFLAGS= -lpthread -lm -lz
-LDFLAGS=
+CFLAGS=-DLOG_MUTEX
+LDFLAGS=-lpthread -lm -lz
 
-SRC = log.c
+SRC = log.c test.c
+LIB = liblog.a
 
-TARGET = t
+TARGET = test
 
 OBJ := $(SRC:.c=.o)
 
-all:$(TARGET)
+all:$(TARGET) $(LIB)
 
 $(TARGET):$(OBJ)
 	$(CC) $(LDFLAGS) -o $@ $^	
 %.o:%.c
-	$(CC) -o $@ -c $<
+	$(CC) $(CFLAGS) $(DEBUG)  -c  $<
+$(LIB):
+	ar crv $(LIB) log.o
+	mv $(LIB) ../lib/
 
 .PHONY:clean
 

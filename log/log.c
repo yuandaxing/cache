@@ -1,4 +1,8 @@
 #include "log.h"
+#include <pthread.h>
+#ifdef LOG_MUTEX
+static pthread_mutex_t log_mutex = PTHREAD_MUTEX_INITIALIZER;
+#endif
 
 static int init = 0;
 static FILE *fp = NULL;
@@ -43,12 +47,19 @@ static int write_file(char *str)
 int init_log()
 {
 	int ret = 0;
-	
+
+#ifdef LOG_MUTEX
+	pthread_mutex_lock(&log_mutex);
+#endif
 	if(init == 0){
 		ret = open_file();
 		init = 1;
 	}
 	
+#ifdef LOG_MUTEX
+	pthread_mutex_unlock(&log_mutex);
+#endif
+
 	return ret;
 }
 int close_log()
@@ -72,6 +83,9 @@ int log_write(const char *fmt, ...)
 			return -1; 	
 	}	
 
+#ifdef LOG_MUTEX
+	pthread_mutex_lock(&log_mutex);
+#endif
 /*the log formate should like "yy-mm-dd hh-mm-ss" */
 	memset(buffer, 0, sizeof(buffer));
 
@@ -86,8 +100,12 @@ int log_write(const char *fmt, ...)
 	vsprintf(buffer + ret, fmt, ap);
 	va_end(ap);
 
-	return write_file(buffer);
+	ret =  write_file(buffer);
 	
+#ifdef LOG_MUTEX
+	pthread_mutex_unlock(&log_mutex);
+#endif
+	return ret;
 }
 int _log_write(char *file, int line, const char *fmt,...)
 {
@@ -106,6 +124,9 @@ int _log_write(char *file, int line, const char *fmt,...)
 			return -1; 	
 	}	
 
+#ifdef LOG_MUTEX
+	pthread_mutex_lock(&log_mutex);
+#endif
 /*the log formate should like "yy-mm-dd hh-mm-ss" */
 	memset(buffer, 0, sizeof(buffer));
 
@@ -122,5 +143,11 @@ int _log_write(char *file, int line, const char *fmt,...)
 	vsprintf(buffer + ret, fmt, ap);
 	va_end(ap);
 
-	return write_file(buffer);
+	ret =  write_file(buffer);
+	
+	fflush(fp);
+#ifdef LOG_MUTEX
+	pthread_mutex_unlock(&log_mutex);
+#endif
+	return ret;
 }

@@ -1,29 +1,30 @@
 SRCDIR=..
 CC=gcc
 DEBUG = -g
-CFLAGS= -lpthread -lm -lz
-LDFLAGS=
+CFLAGS= $(DEBUG) -Wall
+LDFLAGS= -L../lib/ -lmemory -llog
 INCLUDE=-I $(SRCDIR)/include
 LIB = dict.a
-SRC = dict.c 
+SRC = dict.c test.c randgen.c
 RANLIB=ranlib
 
-TARGET = 
+TARGET = test
 
 
 
 OBJ := $(SRC:.c=.o)
 
-all:$(TARGET) $(LIB)
+all:$(OBJ) $(LIB) $(TARGET)
 
 $(TARGET):$(OBJ)
-	$(CC) $(LDFLAGS) -o $@ $^	
+	$(CC) -o $@ $^	$(LDFLAGS) 
 %.o:%.c
-	$(CC) -c $(INCLUDE) $<
-$(LIB):$(OBJ)
+	$(CC) $(INCLUDE) $(CFLAGS) -c  $<
+$(LIB):
 	rm -f $@
-	ar cr $@ $^
+	ar cr $@ dict.o
 	$(RANLIB) $@
+	mv $@ ../lib/
 
 .PHONY:clean
 
